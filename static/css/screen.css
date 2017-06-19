@@ -1021,10 +1021,6 @@ body.nav-opened .menu-button .word {
     box-shadow: #FFF 0 0 0 5px;
 }
 
-body:not(.post-template) .post-title {
-    font-size: 3.6rem;
-}
-
 .post-title a {
     text-decoration: none;
 }
@@ -1577,10 +1573,6 @@ body:not(.post-template) .post-title {
         font-size: 0.95em
     }
 
-    body:not(.post-template) .post-title {
-        font-size: 3.2rem;
-    }
-
     hr {
         margin: 2.4em 0;
     }
@@ -1811,10 +1803,6 @@ body:not(.post-template) .post-title {
 
     h6 {
         font-size: 1.8rem;
-    }
-
-    body:not(.post-template) .post-title {
-        font-size: 2.5rem;
     }
 
     .post-template .post {
