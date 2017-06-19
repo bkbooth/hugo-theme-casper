@@ -87,9 +87,14 @@
             {{ .Date.Format "Jan 2, 2006" }}
           </time>
         {{end}}
-         {{ range .Params.tags }}
-          <span class="post-tag small"><a href="{{ $baseurl }}tags/{{ . | urlize }}/">#{{ . }}</a></span>
-         {{ end }}
+        {{if .Params.tags }}on
+          {{ $tags := .Params.tags }}
+          {{ range $index, $tag := $tags }}
+            <span class="post-tag small">
+              <a href="{{ $baseurl }}tags/{{ . | urlize }}/">{{ $tag }}</a>{{ if lt (add $index 1) (len $tags) }},{{ end }}
+            </span>
+          {{ end }}
+        {{ end }}
         </section>
     </header>
 

@@ -47,8 +47,9 @@
         {{end}}
 
         {{if .Params.tags }}on
-            {{ range $index, $tag := .Params.tags }}
-                <a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>,
+            {{ $tags := .Params.tags }}
+            {{ range $index, $tag := $tags }}
+                <a href="{{$baseurl}}tags/{{ $tag | urlize }}/">{{ $tag }}</a>{{ if lt (add $index 1) (len $tags) }},{{ end }}
             {{ end }}
         {{end}}
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
