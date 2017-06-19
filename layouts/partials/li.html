@@ -34,6 +34,8 @@
         {{else}}
             {{ if isset $author "thumbnail" }}
                 <img class="author-thumb" src="{{ $author.thumbnail | relURL }}" alt="Author image" nopin="nopin" />
+            {{else if .Site.Params.authorThumbnail }}
+                <img class="author-thumb" src="{{.Site.Params.authorThumbnail | relURL }}" alt="Author image" nopin="nopin" />
             {{else if .Site.Params.logo }}
                 <img class="author-thumb" src="{{.Site.Params.logo | relURL }}" alt="Author image" nopin="nopin" />
             {{end}}
